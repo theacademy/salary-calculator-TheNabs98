@@ -61,7 +61,8 @@ public class EmployeeSalaryCalculator
 					//YOUR CODE STARTS HERE
 					//  grossSalary = HR * HW;
 					//  basicPay = HR * HW;
-
+					grossSalary = HR * HW;
+					basicPay = HR * HW;
 					//YOUR CODE ENDS HERE
 				}
 				else
@@ -72,7 +73,11 @@ public class EmployeeSalaryCalculator
 					// overTime = HW - standardWorkingHours;
 					// overTimePay = overTimeRate * overTime;
 					// grossSalary = basicPay + overTimePay;
-
+					basicPay = HR * standardWorkingHours;
+					overTimeRate = 2 * HR;
+					overTime = HW - standardWorkingHours;
+					overTimePay = overTimeRate * overTime;
+					grossSalary = basicPay + overTimePay;
 					//YOUR CODE ENDS HERE
 				}
 				return grossSalary;
